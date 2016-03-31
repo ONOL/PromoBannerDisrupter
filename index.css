@@ -104,9 +104,7 @@ li.nav-item a:hover, li.nav-item a:focus{
   color:black;
 }
 
-li.dropdown-toggle:focus{
-  background-color: rgb(142, 205, 228); 
-}
+
 
 
 /*gets rid of background color on close button when it's clicked */
@@ -123,12 +121,6 @@ span.woohoo-banner{
   font-weight:700;
 }
 
-li.cycleme{
-      width: 25%;
-      font-weight: 700;
-      
-}
-
 
 
 
@@ -138,15 +130,28 @@ li.cycleme{
 /*move dropdown over to the left near code offer */
 .open>.dropdown-menu{
       margin-left: -220px;
-      margin-top: 0px;
+      margin-top: -.5px;
       border-radius: 0px;
-    }
+      border-top: rgb(142, 205, 228); ;
+      box-shadow: none;
+      background-image: none;
+      box-shadow: none;
+     
+
+}
+    
 
 .dropdown-menu{
       margin-left: -220px;
-      margin-top: 0px;
+      margin-top: -.5px;
       border-radius: 0px;
+      border-top: rgb(142, 205, 228); ;
 
+}
+
+
+li.dropdown-toggle:focus{
+  background-color: rgb(142, 205, 228); 
 }
 
 
@@ -310,6 +315,19 @@ font-size: 30px;
 
 
 
+li.cycleme{
+      width: 18%;
+      font-weight: 700;    
+}
+
+
+@media screen and (max-width: 1280px){
+
+li.cycleme{
+      width: 25%;      
+}
+}
+
 
 @media screen and (max-width: 1023px){
 
@@ -383,7 +401,6 @@ span#underline{
   }
 
 }
-
 
 
 
