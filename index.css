@@ -74,11 +74,11 @@ li.nav-item{
   font-family: sans-serif;
   font-weight:400;
   letter-spacing: 1px;
-      padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 30px;
-    padding-right: 30px;
-    font-size: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 15px;
 }
 
 .nav>li>a {
@@ -549,6 +549,9 @@ li.cycleme{
 }
 
 
+.close-button{
+display:none;
+}
 
 
 
