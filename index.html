@@ -65,15 +65,12 @@
       <li class="nav-item cycleme white">30% OFF $50</li>
       <li class="nav-item cycleme white">25% OFF ANY AMOUNT</li>
       <li class="nav-item cycleme white">40% OFF $75</li>
-      <li class="nav-item white">USE CODE<span class="woohoo-banner"> GETMORE</span></li>
+      <li class="nav-item white">USE CODE <span class="woohoo-banner">GETMORE</span></li>
       <li class="nav-item white">ENDS 3/30</li>
     
         <li class="dropdown nav-item">
-          <a class="nav-item white" href="#" class="dropdown-toggle" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false">
-          <span class='white more'>MORE</span> <span class="white more glyphicon glyphicon-plus-sign"></span>
-          <span class='white close-button'>CLOSE</span> <span class="white close-button glyphicon glyphicon-remove-sign"></span>
-
-</a>
+          <a class="more nav-item white" href="#" class="dropdown-toggle" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false">MORE 
+          <span class="glyphicon glyphicon-plus-sign"></span></a>
          
           <ul class="dropdown-menu">
           <div>
@@ -146,14 +143,7 @@
 
 <div class='row'>
   <ul class="mobile-banner">
-  <ul id="dollar-amounts" >
-
-      <li class="nav-item cycleme white">30% OFF $50</li>
-      <li class="nav-item cycleme white">25% OFF ANY AMOUNT</li>
-      <li class="nav-item cycleme white">40% OFF $75</li>
-
-</ul>
-
+  <li id="dollar-amounts" >25% OFF ANY AMOUNT! 30% OFF $50 | 40% OFF $75</li>
   <li id="use-the-code">USE CODE <span id="get-more-bold">GETMORE<span></li>
   <li id="online-only">ONLINE ONLY, ENDS 3/30 <span id="underline">Details<span></li>
   </ul>
@@ -173,23 +163,25 @@
 
 
 <script>
+$( "#more" ).onClick(function() {
+  $( ".close" ).hide;
+   $( ".more" ).show;
+});
+
+$( "#close" ).onClick(function() {
+  $( ".more" ).hide;
+   $( ".close" ).show;
+});
+
 
 
 </script>
 
 
 <script>
-$( "span.more" ).click(function() {
+$( "a" ).click(function() {
   $( ".dropdown-menu" ).slideToggle( "medium" );
-   $( "span.more" ).css( "display", "none" );
-   $( "span.close-button" ).css( "display", "inline-block" );
 });
-$( "span.close-button" ).click(function() {
-  $( ".dropdown-menu" ).slideToggle( "medium" );
-   $( "span.close-button" ).css( "display", "none" );
-   $( "span.more" ).css( "display", "inline-block" );
-});
-
 </script>
 
  <script>
@@ -200,7 +192,7 @@ $( "span.close-button" ).click(function() {
             i = 0;
 
         function execute() {
-            var current = $(elements[i]).css("display","inline-block");
+            var current = $(elements[i]).css("display","inline-block");;
             i = (i + 1) % l;
 
             current
