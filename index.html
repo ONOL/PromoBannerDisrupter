@@ -69,8 +69,12 @@
       <li class="nav-item white">ENDS 3/30</li>
     
         <li class="dropdown nav-item">
-          <a class="more nav-item white" href="#" class="dropdown-toggle" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false">MORE 
-          <span class="glyphicon glyphicon-plus-sign"></span></a>
+          <a class="more nav-item white" href="#" class="dropdown-toggle" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false">
+
+          <span class='white more'>MORE</span> <span class="white more glyphicon glyphicon-plus-sign"></span>
+          <span class='white close-button'>CLOSE</span> <span class="white close-button glyphicon glyphicon-remove-sign"></span>
+
+          </a>
          
           <ul class="dropdown-menu">
           <div>
@@ -163,26 +167,23 @@
 
 
 <script>
-$( "#more" ).onClick(function() {
-  $( ".close" ).hide;
-   $( ".more" ).show;
-});
-
-$( "#close" ).onClick(function() {
-  $( ".more" ).hide;
-   $( ".close" ).show;
-});
-
-
-
-</script>
-
-
-<script>
-$( "a" ).click(function() {
+$( "span.more" ).click(function() {
   $( ".dropdown-menu" ).slideToggle( "medium" );
+   $( "span.more" ).css( "display", "none" );
+   $( "span.close-button" ).css( "display", "inline-block" );
 });
+$( "span.close-button" ).click(function() {
+  $( ".dropdown-menu" ).slideToggle( "medium" );
+   $( "span.close-button" ).css( "display", "none" );
+   $( "span.more" ).css( "display", "inline-block" );
+});
+
+
+
 </script>
+
+
+
 
  <script>
 (function($) {
